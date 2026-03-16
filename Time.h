@@ -36,5 +36,5 @@ struct Time subtract (struct Time &t2,struct Time &t1){
 void display(struct Time &t){
 	cout<<setfill('0')<<setw(2)<<t.h<<":";
 	cout<<setfill('0')<<setw(2)<<t.m<<":";
-	cout<<setfill('0')<<setw(2)<<t.s;
+	cout<<setfill('0')<<setw(2)<<t.s<<endl;
 }
