@@ -15,3 +15,25 @@ int main(){
     cout<<"Time diff is ";
     display(t3);
 }
+
+/*
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void square(int&);
+void square(int &x){
+    x*=x;
+}
+
+int main(){
+    int age;
+    std::string colour;
+
+    std::cout<<"Hello World "<<std::endl;
+    cout<<"Your age and colour :";
+    cin>>age >>colour;
+    square(age);
+    cout<<"Age:"<<setprecision(2)<<age<<endl;
+    cout<<"Colour:"<<setfill('x')<<setw(8)<<colour<<endl;
+
+}*/
