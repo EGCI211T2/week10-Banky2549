@@ -6,14 +6,27 @@ using namespace std;
 #include "Time.h"
 
 int main(){
-    struct Time t1,t2,t3;
+    Time t1,t2,t3;
+    t1.getTime();
+    t2.getTime();
+    //t1.set_time(5,60);
+    //t2.set_time(6);
+    t3=t2.subtract(t1);
+    //t3=t2-t1;
+    t1.display();
+    t2.display();
+    t3.display();
+    /*
     cout<<"What time was it?";
-    getTime(t1);
+    //getTime(t1);
+    t1.set_time
     cout<<"What time is it now?";
-    getTime(t2);
+    //getTime(t2);
+    t2.set_time
     t3=subtract(t2,t1); //t3=t2-t1
     cout<<"Time diff is ";
     display(t3);
+    */
 }
 
 /*
