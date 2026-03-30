@@ -3,9 +3,12 @@ private:
 	int m,h,s;
 public:
 	void set_time(int,int,int);
+	void getTime();
 	void display();
 	Time subtract(Time);
-	void getTime();
+	Time operator-(Time);
+	void operator++();
+	Time operator-(int);
 };
 
 void Time::getTime(){
@@ -24,6 +27,37 @@ void Time::display(){
 	cout<<setfill('0')<<setw(2)<<h<<":";
 	cout<<setfill('0')<<setw(2)<<m<<":";
 	cout<<setfill('0')<<setw(2)<<s<<endl;
+}
+
+Time Time::operator-(int x){
+//minus minute
+	Time t3=*this;
+	t3.m-=x;
+	return t3;
+}
+
+void Time::operator++(){
+	m+=10;
+}
+
+Time Time::operator-(Time t1){
+	struct Time t3;//t3=t2-t1
+	t3.s=s-t1.s;
+	t3.m=m-t1.m;
+	t3.h=h-t1.h;
+	
+	if(t3.s<0){
+		t3.m=t3.m-1;
+		t3.s=t3.s+60;
+	}
+	if(t3.m<0){
+		t3.h=t3.h-1;
+		t3.m=t3.m+60;
+	}
+	if(t3.h<0){
+		t3.h=t3.h+24;
+	}
+	return t3;
 }
 
 Time Time::subtract (Time t1){

@@ -11,10 +11,13 @@ int main(){
     t2.getTime();
     //t1.set_time(5,60);
     //t2.set_time(6);
-    t3=t2.subtract(t1);
+    t3=t2.operator-(t1);
     //t3=t2-t1;
     t1.display();
     t2.display();
+    t3=t2-t1;
+    t3=t3-10;
+    ++t3;
     t3.display();
     /*
     cout<<"What time was it?";
